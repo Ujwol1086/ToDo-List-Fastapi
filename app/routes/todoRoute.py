@@ -14,7 +14,7 @@ def add_todo(todo: ToDo):
     return create_todo(todo)
 
 @router.delete("/todos/{todo_id}")
-def delete_todo(todo_id: int):
+def delete_todo_route(todo_id: int):
     success = delete_todo(todo_id)
     if not success:
         raise HTTPException(status_code=404, detail="ToDo not found")

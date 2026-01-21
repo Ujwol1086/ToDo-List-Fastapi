@@ -13,5 +13,5 @@ def delete_todo(todo_id: int):
     for todo in todos:
         if todo.id == todo_id:
             todos.remove(todo)
-            return {"message": "ToDo deleted"}
-    return {"message": "ToDo not found"}
+            return True
+    return False
